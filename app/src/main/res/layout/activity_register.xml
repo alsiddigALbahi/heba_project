@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registerActivity"
+    android:background="@drawable/background"
+    android:layoutDirection="rtl">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/intertext">
+
+        <TextView
+            android:id="@+id/heder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="أدخل بياناتك لتسجيل الدخول"
+            android:textAlignment="center"
+            android:textSize="25dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textName"
+            android:layout_below="@id/heder"
+            android:layout_marginTop="50dp"
+            android:textColor="#555555"
+            android:text="الإسم :"
+            android:textSize="16dp"
+            android:padding="6dp"/>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textName"
+            android:background="@drawable/intertext"
+            android:hint="أدخل الأسم"
+            android:inputType="textPersonName"
+            android:padding="6dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textemail"
+            android:layout_below="@id/name"
+            android:layout_marginTop="10dp"
+            android:textColor="#555555"
+            android:text="البريد الإلكتروني :"
+            android:textSize="16dp"
+            android:padding="6dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textemail"
+            android:id="@+id/email"
+            android:hint="أدخل بريدك"
+            android:inputType="textEmailAddress"
+            android:padding="6dp"
+            android:background="@drawable/intertext"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/texdate"
+            android:layout_below="@id/email"
+            android:layout_marginTop="10dp"
+            android:textColor="#555555"
+            android:text="تاريخ الميلاد : (اليوم/الشهر/السنة)"
+            android:textSize="16dp"
+            android:padding="6dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/texdate"
+            android:id="@+id/date"
+            android:inputType="date"
+            android:hint="أختر تاريخ الميلاد : (اليوم/الشهر/السنة)"
+            android:focusable="false"
+            android:padding="6dp"
+            android:background="@drawable/intertext"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/texgender"
+            android:layout_below="@id/date"
+            android:layout_marginTop="10dp"
+            android:textColor="#555555"
+            android:text="الجنس : "
+            android:textSize="16dp"
+            android:padding="6dp"/>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radiogroup"
+            android:layout_below="@+id/texgender"
+            android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio1"
+            android:text="أنثي"
+            android:textSize="16sp"
+            android:textColor="#555555"
+          />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio2"
+            android:text="ذكر"
+            android:textSize="16sp"
+            android:textColor="#555555"
+            android:layout_marginStart="30dp"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textmobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radiogroup"
+            android:layout_marginTop="10dp"
+            android:padding="6dp"
+            android:text="رقم الهاتف : "
+            android:textColor="#555555"
+            android:textSize="16dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textmobile"
+            android:id="@+id/mobile"
+            android:inputType="phone"
+            android:layoutDirection="rtl"
+            android:hint="أدخل رقم الهاتف "
+            android:padding="6dp"
+            android:background="@drawable/intertext"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textpassword1"
+            android:layout_below="@id/mobile"
+            android:layout_marginTop="10dp"
+            android:textColor="#555555"
+            android:text="كلمة السر : "
+            android:textSize="16dp"
+            android:padding="6dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textpassword1"
+            android:id="@+id/password1"
+            android:inputType="textPassword"
+            android:hint="أدخل كلمة السر"
+            android:padding="6dp"
+            android:background="@drawable/intertext"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textpassword2"
+            android:layout_below="@id/password1"
+            android:layout_marginTop="10dp"
+            android:textColor="#555555"
+            android:text="تأكيد كلمة السر : "
+            android:textSize="16dp"
+            android:padding="6dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textpassword2"
+            android:id="@+id/password2"
+            android:inputType="textPassword"
+            android:hint="أدخل تأكيد كلمة السر "
+            android:padding="6dp"
+            android:background="@drawable/intertext"/>
+
+        <TextView
+            android:id="@+id/regisretextRegister"
+            android:layout_width="151dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/password2"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="85dp"
+            android:text="إنشاء حساب"
+            android:textSize="25dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password2"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="65dp"
+            android:src="@drawable/login"
+            android:textColor="@color/white"
+            app:fabCustomSize="80dp"
+            app:maxImageSize="50dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:elevation="10dp"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/regisretextRegister2"
+            android:layout_width="151dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/regisretextRegister"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="85dp"
+            android:text="إنشاء حساب"
+            android:textSize="25dp" />
+
+    </RelativeLayout>
+
+</ScrollView>

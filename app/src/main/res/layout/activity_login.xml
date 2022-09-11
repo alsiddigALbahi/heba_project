@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginActivity"
+    android:background="@drawable/background"
+    android:layoutDirection="rtl">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_margin="15dp"
+        android:background="@android:color/transparent">
+
+        <TextView
+            android:id="@+id/loginheder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="مرحباً بك ..."
+            android:layout_marginStart="5dp"
+            android:textSize="30dp" />
+        <TextView
+            android:id="@+id/loginheder2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/loginheder"
+            android:layout_marginTop="10dp"
+            android:text="مرحباً بك ..."
+            android:layout_marginStart="20dp"
+            android:textSize="25dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/logintextemail"
+            android:layout_below="@id/loginheder2"
+            android:layout_marginTop="50dp"
+            android:textColor="#555555"
+            android:text="البريد الإلكتروني :"
+            android:textSize="16dp"
+            android:padding="6dp"/>
+
+        <EditText
+            android:id="@+id/loginemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logintextemail"
+            android:background="@drawable/intertext"
+            android:hint=" أدخل بريدك"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:padding="6dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/logintextpassword"
+            android:layout_below="@id/loginemail"
+            android:layout_marginTop="10dp"
+            android:textColor="#555555"
+            android:text="كلمة السر : "
+            android:textSize="16dp"
+            android:padding="6dp"/>
+
+        <EditText
+            android:id="@+id/loginpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logintextpassword"
+            android:background="@drawable/intertext"
+            android:hint="                                                    أدخل كلمة السر"
+            android:inputType="textPassword"
+            android:layoutDirection="rtl"
+            android:minHeight="48dp"
+            android:padding="6dp" />
+
+        <TextView
+            android:id="@+id/logintextlogin"
+            android:layout_width="151dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/loginpassword"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="85dp"
+            android:text="تسجيل الدخول"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/loginreg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="420dp"
+            android:background="@drawable/button"
+            app:fabCustomSize="80dp"
+            app:maxImageSize="50dp" />
+
+        <TextView
+            android:id="@+id/loginexit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logintextlogin"
+            android:layout_marginTop="100dp"
+            android:text="مرحباً بك ..."
+            android:layout_marginStart="5dp"
+            android:textSize="25dp" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/loginprogressBar"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:elevation="10dp"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+</ScrollView>
