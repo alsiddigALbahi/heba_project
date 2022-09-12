@@ -21,13 +21,12 @@
 
       <TextView
           android:id="@+id/show_welcom"
-          android:layout_width="wrap_content"
+          android:layout_width="266dp"
           android:layout_height="wrap_content"
-          android:layout_margin="30dp"
-          android:layout_marginStart="10dp"
-          android:layout_marginTop="10dp"
-          android:layout_marginEnd="10dp"
-          android:layout_marginBottom="10dp"
+          android:layout_marginStart="30dp"
+          android:layout_marginTop="30dp"
+          android:layout_marginEnd="30dp"
+          android:layout_marginBottom="30dp"
           android:hint="  تحميل ...."
           android:textSize="30dp" />
 
@@ -44,7 +43,7 @@
           android:layout_height="wrap_content"
           android:layout_below="@id/show_welcom"
           android:layout_marginStart="50dp"
-          android:layout_marginTop="9dp"
+          android:layout_marginTop="10dp"
           android:hint="   الإسم ...."
           android:textSize="20dp" />
 
@@ -90,8 +89,8 @@
           android:layout_width="38dp"
           android:layout_height="38dp"
           android:layout_below="@id/ic_date"
-          android:background="@drawable/ic_baseline_card_giftcard_24"
-          android:layout_marginTop="10dp"/>
+          android:layout_marginTop="10dp"
+          android:background="@drawable/genderj" />
 
       <TextView
           android:id="@+id/show_gender"
@@ -129,6 +128,32 @@
           android:layout_centerVertical="true"
           android:elevation="10dp"
           android:visibility="gone"/>
+
+      <TextView
+          android:id="@+id/textlogout"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/show_phone"
+          android:layout_marginStart="12dp"
+          android:layout_marginTop="53dp"
+          android:hint="  تسجيل الخروج "
+          android:textColor="@color/black"
+          android:textSize="25dp"
+          android:textStyle="bold"
+          />
+
+      <Button
+          android:id="@+id/logout"
+          android:layout_width="73dp"
+          android:layout_height="75dp"
+          android:layout_marginStart="220dp"
+          android:layout_marginTop="360dp"
+          android:background="@drawable/button"
+          app:fabCustomSize="80dp"
+          app:icon="@drawable/log"
+          app:iconSize="40dp"
+          app:maxImageSize="50dp"
+          tools:ignore="SpeakableTextPresentCheck" />
 
 
    </RelativeLayout>

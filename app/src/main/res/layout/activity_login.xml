@@ -18,24 +18,16 @@
             android:id="@+id/loginheder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="30dp"
             android:text="مرحباً بك ..."
-            android:layout_marginStart="5dp"
             android:textSize="30dp" />
-        <TextView
-            android:id="@+id/loginheder2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/loginheder"
-            android:layout_marginTop="10dp"
-            android:text="مرحباً بك ..."
-            android:layout_marginStart="20dp"
-            android:textSize="25dp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/logintextemail"
-            android:layout_below="@id/loginheder2"
+            android:layout_below="@id/loginheder"
             android:layout_marginTop="50dp"
             android:textColor="#555555"
             android:text="البريد الإلكتروني :"
@@ -87,13 +79,16 @@
 
         <Button
             android:id="@+id/loginreg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="250dp"
-            android:layout_marginTop="420dp"
+            android:layout_width="73dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="360dp"
             android:background="@drawable/button"
             app:fabCustomSize="80dp"
-            app:maxImageSize="50dp" />
+            app:icon="@drawable/log"
+            app:iconSize="40dp"
+            app:maxImageSize="50dp"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/loginexit"

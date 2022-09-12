@@ -41,7 +41,8 @@
             android:background="@drawable/intertext"
             android:hint="أدخل الأسم"
             android:inputType="textPersonName"
-            android:padding="6dp" />
+            android:padding="6dp"
+            tools:ignore="TouchTargetSizeCheck" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -52,15 +53,17 @@
             android:text="البريد الإلكتروني :"
             android:textSize="16dp"
             android:padding="6dp"/>
+
         <EditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/textemail"
-            android:id="@+id/email"
+            android:background="@drawable/intertext"
             android:hint="أدخل بريدك"
             android:inputType="textEmailAddress"
             android:padding="6dp"
-            android:background="@drawable/intertext"/>
+            tools:ignore="TouchTargetSizeCheck" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -71,16 +74,18 @@
             android:text="تاريخ الميلاد : (اليوم/الشهر/السنة)"
             android:textSize="16dp"
             android:padding="6dp"/>
+
         <EditText
+            android:id="@+id/date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/texdate"
-            android:id="@+id/date"
-            android:inputType="date"
-            android:hint="أختر تاريخ الميلاد : (اليوم/الشهر/السنة)"
+            android:background="@drawable/intertext"
             android:focusable="false"
+            android:hint="أختر تاريخ الميلاد : (اليوم/الشهر/السنة)"
+            android:inputType="date"
             android:padding="6dp"
-            android:background="@drawable/intertext"/>
+            tools:ignore="TouchTargetSizeCheck" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -125,16 +130,18 @@
             android:text="رقم الهاتف : "
             android:textColor="#555555"
             android:textSize="16dp" />
+
         <EditText
+            android:id="@+id/mobile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/textmobile"
-            android:id="@+id/mobile"
+            android:background="@drawable/intertext"
+            android:hint="أدخل رقم الهاتف "
             android:inputType="phone"
             android:layoutDirection="rtl"
-            android:hint="أدخل رقم الهاتف "
             android:padding="6dp"
-            android:background="@drawable/intertext"/>
+            tools:ignore="TouchTargetSizeCheck" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -145,15 +152,17 @@
             android:text="كلمة السر : "
             android:textSize="16dp"
             android:padding="6dp"/>
+
         <EditText
+            android:id="@+id/password1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/textpassword1"
-            android:id="@+id/password1"
-            android:inputType="textPassword"
+            android:background="@drawable/intertext"
             android:hint="أدخل كلمة السر"
+            android:inputType="textPassword"
             android:padding="6dp"
-            android:background="@drawable/intertext"/>
+            tools:ignore="TouchTargetSizeCheck" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -164,15 +173,17 @@
             android:text="تأكيد كلمة السر : "
             android:textSize="16dp"
             android:padding="6dp"/>
+
         <EditText
+            android:id="@+id/password2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/textpassword2"
-            android:id="@+id/password2"
-            android:inputType="textPassword"
+            android:background="@drawable/intertext"
             android:hint="أدخل تأكيد كلمة السر "
+            android:inputType="textPassword"
             android:padding="6dp"
-            android:background="@drawable/intertext"/>
+            tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/regisretextRegister"
@@ -184,26 +195,27 @@
             android:text="إنشاء حساب"
             android:textSize="25dp" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <Button
             android:id="@+id/reg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="73dp"
+            android:layout_height="75dp"
             android:layout_below="@id/password2"
-            android:layout_marginStart="250dp"
+            android:layout_marginStart="220dp"
             android:layout_marginTop="65dp"
-            android:src="@drawable/login"
-            android:textColor="@color/white"
+            android:background="@drawable/button"
             app:fabCustomSize="80dp"
+            app:icon="@drawable/log"
+            app:iconSize="40dp"
             app:maxImageSize="50dp"
             tools:ignore="SpeakableTextPresentCheck" />
+
         <ProgressBar
+            android:id="@+id/progressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/progressBar"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
             android:elevation="10dp"
-            android:visibility="gone"/>
+            android:visibility="visible" />
         <TextView
             android:id="@+id/regisretextRegister2"
             android:layout_width="151dp"

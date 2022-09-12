@@ -10,16 +10,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity2 extends AppCompatActivity {
-    FloatingActionButton login,register ;
+    Button login,register ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        getSupportActionBar().setTitle("  الرئيسئة ...");
+        getSupportActionBar().setTitle("  الرئيسية ...");
 
-        login= (FloatingActionButton) findViewById(R.id.mainlogin);
-        register= (FloatingActionButton) findViewById(R.id.mainregister);
+        login= (Button) findViewById(R.id.mainlogin);
+        register= (Button) findViewById(R.id.mainregister);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -29,7 +30,7 @@ public class loginActivity extends AppCompatActivity {
     private EditText loginemail,loginpass;
     private ProgressBar loginpressbar;
     private FirebaseAuth authProfile;
-    FloatingActionButton login;
+    Button login;
     private static final String TAG = "loginActivity";
 
     @Override
@@ -81,6 +82,8 @@ public class loginActivity extends AppCompatActivity {
                     FirebaseUser firebaseUser = authProfile.getCurrentUser();
                     if(firebaseUser.isEmailVerified()){
                         Toast.makeText(loginActivity.this, "  تم الدخول بنجاح ...", Toast.LENGTH_LONG).show();
+                        startActivity( new Intent(loginActivity.this,userProfileActivity.class));
+                        finish();
                     } else {
                         firebaseUser.sendEmailVerification();
                         authProfile.signOut();
