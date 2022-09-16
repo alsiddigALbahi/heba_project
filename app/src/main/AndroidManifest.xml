@@ -16,23 +16,28 @@
         android:theme="@style/Theme.LastAuction"
         tools:targetApi="31">
         <activity
+            android:name=".loginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".userProfileActivity"
             android:exported="false" />
-
         <activity
-            android:name=".MainActivity2"
-            android:exported="true">  <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            android:name=".onboard1"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
-
-        <activity
-            android:name=".registerActivity"
-            android:exported="false">
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
-            android:name=".loginActivity"
+            android:name=".splashscreen"
+            android:exported="false" />
+        <activity
+            android:name=".registerActivity"
             android:exported="false" />
         <activity
             android:name=".details"
@@ -47,10 +52,8 @@
             android:name=".my_auction"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="false">
-
-        </activity>
+            android:name=".MainActivity2"
+            android:exported="false" />
     </application>
 
 </manifest>

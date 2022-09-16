@@ -9,7 +9,7 @@
     <item android:title="مزاداتي"
         android:id="@+id/my_auctions"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_baseline_home_24"/>
+        android:icon="@drawable/auc2"/>
     <item android:title=""
         android:id="@+id/holder"
         app:showAsAction="ifRoom"
@@ -20,8 +20,8 @@
         app:showAsAction="ifRoom"
         android:icon="@drawable/ic_baseline_favorite_24"/>
 
-    <item android:title="بيانات المنظة"
+    <item android:title="بيانات المنظمة"
         android:id="@+id/bsmt"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_baseline_power_settings_new_24"/>
+        android:icon="@drawable/ic_kier"/>
 </menu>

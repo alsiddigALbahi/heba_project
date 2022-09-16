@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.example.lastauction.Domain.AuctionAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
      private RecyclerView.Adapter adapter;
      private   RecyclerView recyclerViewCategoryList,recyclerView2;
+     FloatingActionButton profile;
      ConstraintLayout boton1;
     ConstraintLayout boton2;
     ConstraintLayout boton3;
@@ -53,6 +55,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         recyclerViewCategory();
+        profile = (FloatingActionButton) findViewById(R.id.profile);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,loginActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

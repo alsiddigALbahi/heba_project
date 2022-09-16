@@ -1,15 +1,52 @@
 package com.example.lastauction;
 
 public class Member {
-    String title, image, des;
+    String title, image, des, pri;
+    String orgpri, overauc, aucnum;
 
     public Member() {
     }
 
-    public Member(String title, String image, String des) {
+    public Member(String title, String image, String des, String pri, String orgpri, String overauc, String aucnum) {
         this.title = title;
         this.image = image;
         this.des = des;
+        this.pri = pri;
+        this.orgpri = orgpri;
+        this.overauc = overauc;
+        this.aucnum = aucnum;
+    }
+
+    public String getOrgpri() {
+        return orgpri;
+    }
+
+    public void setOrgpri(String orgpri) {
+        this.orgpri = orgpri;
+    }
+
+    public String getOverauc() {
+        return overauc;
+    }
+
+    public void setOverauc(String overauc) {
+        this.overauc = overauc;
+    }
+
+    public String getAucnum() {
+        return aucnum;
+    }
+
+    public void setAucnum(String aucnum) {
+        this.aucnum = aucnum;
+    }
+
+    public String getPri() {
+        return pri;
+    }
+
+    public void setPri(String pri) {
+        this.pri = pri;
     }
 
     public String getTitle() {
@@ -36,4 +73,3 @@ public class Member {
         this.des = des;
     }
 }
-

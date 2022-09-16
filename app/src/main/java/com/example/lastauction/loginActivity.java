@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -31,6 +32,7 @@ public class loginActivity extends AppCompatActivity {
     private ProgressBar loginpressbar;
     private FirebaseAuth authProfile;
     Button login;
+    TextView register;
     private static final String TAG = "loginActivity";
 
     @Override
@@ -44,6 +46,15 @@ public class loginActivity extends AppCompatActivity {
         loginpressbar = findViewById(R.id.loginprogressBar);
         login = findViewById(R.id.loginreg);
         authProfile = FirebaseAuth.getInstance();
+        register= findViewById(R.id.registertext);
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(loginActivity.this,registerActivity.class);
+                startActivity(intent);
+            }
+        });
 
        login.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -87,7 +98,7 @@ public class loginActivity extends AppCompatActivity {
                     } else {
                         firebaseUser.sendEmailVerification();
                         authProfile.signOut();
-                        showAlertDialog();
+                        /*showAlertDialog();*/
                     }
 
                 } else {
@@ -109,7 +120,7 @@ public class loginActivity extends AppCompatActivity {
         });
     }
 
-    private void showAlertDialog() {
+   /* private void showAlertDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(loginActivity.this);
         builder.setTitle("البريد الإلكتروني غير متحقق");
         builder.setMessage("من فضلك ....تفقد بريك الإلكتروني لتحقق !");
@@ -125,7 +136,7 @@ public class loginActivity extends AppCompatActivity {
         });
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
-    }
+    }*/
 
     @Override
     protected void onStart() {

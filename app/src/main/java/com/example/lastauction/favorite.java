@@ -15,6 +15,7 @@ public class favorite extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorite);
+        getSupportActionBar().setTitle("  المفضلة  ");
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.boot);
         bottomNavigationView.setBackground(null);

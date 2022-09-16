@@ -15,6 +15,7 @@ public class my_auction extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_auction);
+        getSupportActionBar().setTitle("   مزاداتي  ");
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.boot);
         bottomNavigationView.setBackground(null);

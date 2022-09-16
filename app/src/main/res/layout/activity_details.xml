@@ -24,18 +24,19 @@
                  android:layout_marginStart="30dp">
 
                  <TextView
-                     android:id="@+id/price"
+                     android:id="@+id/tprice"
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:layout_marginStart="15dp"
                      android:layout_marginEnd="15dp"
-                     android:text=" السعر الأصلي : "
+                     android:text=" السعر الأصلي   "
                      android:textAppearance="?android:attr/textAppearanceLarge"
                      android:textColor="@color/black"
                      android:textSize="20sp"
                      android:textStyle="bold" />
+
                  <TextView
-                     android:id="@+id/overprice"
+                     android:id="@+id/orgpri"
                      android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
                      android:layout_marginStart="15dp"
@@ -45,6 +46,16 @@
                      android:textColor="@color/black"
                      android:textSize="20sp"
                      android:textStyle="bold" />
+                 <TextView
+                     android:id="@+id/carrency"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:maxLines="1"
+                     android:text="USD "
+                     android:textColor="#050505"
+                     android:textSize="20sp"
+                     android:layout_marginStart="5dp"
+                     android:textStyle="normal" />
              </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -59,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp"
-                    android:text=" السعر النهائي : "
+                    android:text=" السعر النهائي   "
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@color/black"
                     android:textSize="20sp"
@@ -71,10 +82,20 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp"
                     android:text="00"
+                    android:textColor="#2E3F9F"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/carrency2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="USD "
+                    android:textColor="#122485"
+                    android:textSize="20sp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="normal" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -89,7 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp"
-                    android:text="أعلي مزايدة : "
+                    android:text="أعلي مزايدة   "
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@color/black"
                     android:textSize="20sp"
@@ -101,25 +122,37 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp"
                     android:text="00"
+                    android:textColor="#F33F7C"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold" />
+                <TextView
+                android:id="@+id/carrency3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="USD "
+                android:textColor="#E91E63"
+                android:textSize="20sp"
+                android:layout_marginStart="5dp"
+                android:textStyle="normal" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="50dp"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="5dp"
                 android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/interAuc"
-                    android:layout_width="136dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="130dp"
+                    android:layout_height="35dp"
                     android:layout_marginStart="50dp"
-                    android:hint="أضف مزايدة"
+                    android:background="@drawable/intertext"
+                    android:hint="  أضف مزايدة"
                     android:inputType="text"
                     tools:ignore="TouchTargetSizeCheck" />
 
@@ -144,12 +177,13 @@
                 android:layout_margin="8dp"
                 card_view:cardCornerRadius="3dp"
                 card_view:cardElevation="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="280dp">
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/detailImageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:layout_margin="5dp"
                     android:adjustViewBounds="true"
                     android:padding="10dp"
@@ -173,7 +207,7 @@
                 <TextView
                     android:id="@+id/nameDetailTextView"
                     android:layout_width="323dp"
-                    android:layout_height="57dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginEnd="15dp"
                     android:text="الأسم"
@@ -182,19 +216,31 @@
                     android:textSize="25sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/descriptionDetailTextView"
-                    android:layout_width="321dp"
-                    android:layout_height="71dp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:text="الوصف"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="#8E8989"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
 
+                    <TextView
+                        android:id="@+id/auctionnum1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:paddingTop="5dp"
+                        android:layout_marginStart="10dp"
+                        android:text="0 "
+                        android:textColor="#646161"
+                        android:padding="5dp"
+                        android:textSize="19sp"
+                        android:textStyle="normal" />
 
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/auc2" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
