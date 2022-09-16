@@ -87,7 +87,7 @@ public class userProfileActivity extends AppCompatActivity {
             public void onClick(View view) {
                 authprofile.signOut();
                 Toast.makeText(userProfileActivity.this," تم تسجيل الخروج بنجاح .... ",Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(userProfileActivity.this,MainActivity2.class);
+                Intent intent = new Intent(userProfileActivity.this,loginActivity.class);
                 startActivity(intent);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK
                         | Intent.FLAG_ACTIVITY_NEW_TASK);

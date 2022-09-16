@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -41,6 +42,7 @@ public class registerActivity extends AppCompatActivity {
     private RadioGroup radioGroup;
     private RadioButton radioButton;
     private Button reg;
+    TextView login3;
     private DatePickerDialog picker;
     private static final String TAG = "registerActivity";
 
@@ -61,6 +63,15 @@ public class registerActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         radioGroup = findViewById(R.id.radiogroup);
         reg = findViewById(R.id.reg);
+        login3 = findViewById(R.id.login3);
+
+        login3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(registerActivity.this,loginActivity.class);
+                startActivity(intent);
+            }
+        });
 
         radioGroup.clearCheck();
 
@@ -151,10 +162,11 @@ public class registerActivity extends AppCompatActivity {
                     password2.clearComposingText();
                 } else {
                     textGender = radioButton.getText().toString();
-                    progressBar.setVisibility(View.VISIBLE);
+
                     registerRegister(textdate,textGender,textemail,textmobile,textName,textpass1);
                     
                 }
+                progressBar.setVisibility(View.VISIBLE);
             }
         });
 

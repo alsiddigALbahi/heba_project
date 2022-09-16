@@ -41,6 +41,10 @@ public class AuctionAdapter extends RecyclerView.Adapter<AuctionAdapter.Myviewho
         final Member data_position= members.get(position);
         holder.title.setText(members.get(position).getTitle());
         holder.des.setText(members.get(position).getDes());
+        holder.lastpri.setText(members.get(position).getPri());
+        holder.orgpri.setText(members.get(position).getOrgpri());
+        holder.overauc.setText(members.get(position).getOverauc());
+        holder.aucnum.setText(members.get(position).getAucnum());
         Picasso.get().load(members.get(position).getImage()).into(holder.image);
         holder.layout1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +52,10 @@ public class AuctionAdapter extends RecyclerView.Adapter<AuctionAdapter.Myviewho
                 Intent intent = new Intent(view.getContext(), details.class);
                 intent.putExtra("title",data_position.getTitle());
                 intent.putExtra("des",data_position.getDes());
+                intent.putExtra("lastpri",data_position.getPri());
+                intent.putExtra("orgpri",data_position.getOrgpri());
+                intent.putExtra("overauc",data_position.getOverauc());
+                intent.putExtra("aucnum",data_position.getAucnum());
                 intent.putExtra("image",data_position.getImage());
                 view.getContext().startActivity(intent);
             }
@@ -61,15 +69,19 @@ public class AuctionAdapter extends RecyclerView.Adapter<AuctionAdapter.Myviewho
     }
 
     class Myviewholder extends RecyclerView.ViewHolder{
-        TextView title,des;
+        TextView title,des,lastpri,orgpri,overauc,aucnum;
         ShapeableImageView image;
         ConstraintLayout layout1;
         public Myviewholder(@NonNull View itemView) {
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.nameTextView);
-            des = (TextView) itemView.findViewById(R.id.descriptionTextView);
+            des = (TextView) itemView.findViewById(R.id.auctionnum);
+            lastpri = (TextView) itemView.findViewById(R.id.lastpri);
             image = (ShapeableImageView) itemView.findViewById(R.id.auctionImageView);
             layout1 = (ConstraintLayout) itemView.findViewById(R.id.layout1);
+            orgpri = (TextView) itemView.findViewById(R.id.orgprice);
+            overauc = (TextView) itemView.findViewById(R.id.overauc1);
+            aucnum = (TextView) itemView.findViewById(R.id.aucnumber);
         }
     }
 

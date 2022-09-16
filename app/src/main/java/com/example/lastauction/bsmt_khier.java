@@ -15,6 +15,7 @@ public class bsmt_khier extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bsmt_khier);
+        getSupportActionBar().setTitle("  منظمة بسمة خير  ");
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.boot);
         bottomNavigationView.setBackground(null);

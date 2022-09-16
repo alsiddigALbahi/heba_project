@@ -137,9 +137,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/textmobile"
             android:background="@drawable/intertext"
-            android:hint="أدخل رقم الهاتف "
+            android:hint="أدخل رقم الهاتف                   "
             android:inputType="phone"
-            android:layoutDirection="rtl"
             android:padding="6dp"
             tools:ignore="TouchTargetSizeCheck" />
         <TextView
@@ -215,16 +214,19 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:elevation="10dp"
-            android:visibility="visible" />
+            android:visibility="gone" />
+
         <TextView
-            android:id="@+id/regisretextRegister2"
-            android:layout_width="151dp"
-            android:layout_height="45dp"
+            android:id="@+id/login3"
+            android:layout_width="270dp"
+            android:layout_height="51dp"
             android:layout_below="@id/regisretextRegister"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="85dp"
-            android:text="إنشاء حساب"
-            android:textSize="25dp" />
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="24dp"
+            android:text="تسجيل الدخول , أمتلك حساب بالفعل  "
+            android:layout_marginBottom="40dp"
+            android:textColor="#1D309E"
+            android:textSize="20dp" />
 
     </RelativeLayout>
 

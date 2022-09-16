@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/logintextpassword"
             android:background="@drawable/intertext"
-            android:hint="                                                    أدخل كلمة السر"
+            android:hint="                              أدخل كلمة السر"
             android:inputType="textPassword"
             android:layoutDirection="rtl"
             android:minHeight="48dp"
@@ -91,14 +91,15 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
-            android:id="@+id/loginexit"
+            android:id="@+id/registertext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/logintextlogin"
-            android:layout_marginTop="100dp"
-            android:text="مرحباً بك ..."
-            android:layout_marginStart="5dp"
-            android:textSize="25dp" />
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:text="إنشاء حساب , لم أنشئ حساب من قبل "
+            android:textColor="#3248C7"
+            android:textSize="20dp" />
 
         <ProgressBar
             android:layout_width="wrap_content"
