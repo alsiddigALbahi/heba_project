@@ -1,7 +1,9 @@
 package com.example.lastauction;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -86,6 +88,12 @@ public class loginActivity extends AppCompatActivity {
     }
 
     private void loginUser(String email, String pass) {
+
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("UserDate", 0);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putString("email", email); // Storing string
+        editor.commit(); // commit changes
+
         authProfile.signInWithEmailAndPassword(email,pass).addOnCompleteListener(loginActivity.this, new  OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
