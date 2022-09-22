@@ -25,7 +25,8 @@ import java.util.zip.Inflater;
 public class AuctionAdapter extends RecyclerView.Adapter<AuctionAdapter.Myviewholder> {
     Context context;
     ArrayList<Member> members;
-    public AuctionAdapter(Context c,ArrayList<Member> b){
+
+    public AuctionAdapter(Context c, ArrayList<Member> b){
       context = c ;
       members = b;
     }
@@ -57,6 +58,7 @@ public class AuctionAdapter extends RecyclerView.Adapter<AuctionAdapter.Myviewho
                 intent.putExtra("overauc",data_position.getOverauc());
                 intent.putExtra("aucnum",data_position.getAucnum());
                 intent.putExtra("image",data_position.getImage());
+                intent.putExtra("fav",data_position.getFav());
                 view.getContext().startActivity(intent);
             }
         });

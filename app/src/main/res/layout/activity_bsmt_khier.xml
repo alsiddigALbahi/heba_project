@@ -6,15 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".bsmt_khier">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="231dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="منظمه بسمة خير "
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="بسمة خير منظمة غير حكومية اتحادية تعمل في مجال الأشخاص ذوي الإعاقة والمساعدات الإنسانية منذ عام 2014 وفقا للقوانين المنظمة للقطاع غير الربحي في السودان . أنشئت بسمة خير من أجل تغير نظر المجتمع الى الأشخاص ذوي الإعاقة ومن أجل عمل الخير تقديم الخدمات الطبية التأهيلية والخدمات التعليمية والاجتماعية ,والتدريب والتطوير لذوي الاعاقة."
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="50px"
+            android:text="فكرة المنظمة "
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/textView131"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="عبارة عن منشور في احد المجموعات الشبابية لحث الشباب على اعمال خيرية وكانت هي البداية بتجمع 5 فقط من أعضاء المجموعة وزيارة مركز تعليمي للأطفال ذوي الإعاقة وكان المركز يفقد كل مقومات التعليم والتدريب للأطفال ومن هنا بدأت رحلة بسمة خير وكان هي اول مبادرة كانت  أغسطس عــــــــــــــــــــــــــــــــــــــــــــــــــــام 2014"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="معلومات التواصل
+
+0912110630 - 0922132213
+
+basmtorg@gmail.com
+
+
+حساب بنك فيصل
+30026606
+
+حساب بنك الخرطوم
+0390120002470001
+IBAN : SD9804020002470001"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/action"
         android:layout_width="match_parent"

@@ -3,6 +3,7 @@ package com.example.lastauction;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,10 +16,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.example.lastauction.Domain.AuctionAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -49,12 +52,26 @@ public class MainActivity extends AppCompatActivity {
      DatabaseReference reference3;
      DatabaseReference reference4;
 
+     DrawerLayout drawerLayout;
+     Toolbar toolbar;
+     NavigationView navigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        drawerLayout=findViewById(R.id.drawerlayout);
+        //toolbar=findViewById(R.id.toolbar);
+        navigationView=findViewById(R.id.nav_view);
+
+
+
+
+
         recyclerViewCategory();
+
         profile = (FloatingActionButton) findViewById(R.id.profile);
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -276,4 +293,5 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    }
+
+}
